@@ -7,6 +7,8 @@ import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
 import com.safa.temperature.soap.api.services.TemperatureService;
+import com.safa.temperature.soap.api.temperaturerequestresponse.AvgTemperatureRequest;
+import com.safa.temperature.soap.api.temperaturerequestresponse.AvgTemperatureResponse;
 import com.safa.temperature.soap.api.temperaturerequestresponse.MaxTemperatureRequest;
 import com.safa.temperature.soap.api.temperaturerequestresponse.MaxTemperatureResponse;
 import com.safa.temperature.soap.api.temperaturerequestresponse.MinTemperatureRequest;
@@ -30,5 +32,11 @@ public class TemperatureEndPoint {
 	 @ResponsePayload
 	public MaxTemperatureResponse getMaxTemperature(@RequestPayload MaxTemperatureRequest request) {
 		return service.max(request);
+	}
+
+	 @PayloadRoot(localPart = "AvgTemperatureRequest", namespace = NAMESPACE)
+	 @ResponsePayload
+	public AvgTemperatureResponse getAvgTemperature(@RequestPayload AvgTemperatureRequest request) {
+		return service.avg(request);
 	}
 }
