@@ -39,4 +39,5 @@ public class TemperatureEndPoint {
 	public AvgTemperatureResponse getAvgTemperature(@RequestPayload AvgTemperatureRequest request) {
 		return service.avg(request);
 	}
+	 
 }
