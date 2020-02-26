@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.safa.temperature.soap.api.temperaturerequestresponse.MaxTemperatureRequest;
+import com.safa.temperature.soap.api.temperaturerequestresponse.MaxTemperatureResponse;
 import com.safa.temperature.soap.api.temperaturerequestresponse.MinTemperatureRequest;
 import com.safa.temperature.soap.api.temperaturerequestresponse.MinTemperatureResponse;
 
@@ -17,6 +19,16 @@ public class TemperatureService {
 		List<Integer> liste = request.getTemperatures();
 		liste.sort(Comparator.naturalOrder());
 		response.setResTemp(liste.get(0));
+		return response;
+
+	}
+
+	public MaxTemperatureResponse max(MaxTemperatureRequest request) {
+
+		MaxTemperatureResponse response = new MaxTemperatureResponse();
+		List<Integer> liste = request.getTemperatures();
+		liste.sort(Comparator.naturalOrder());
+		response.setResTemp(liste.get(liste.size() - 1));
 		return response;
 
 	}
