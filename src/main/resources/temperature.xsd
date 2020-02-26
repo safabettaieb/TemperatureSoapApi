@@ -49,7 +49,7 @@
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
-    	<xsd:element name="closestToZeroTemperatureRequest">
+    	<xsd:element name="ClosestToZeroTemperatureRequest">
 		<xsd:complexType>
 			<xsd:sequence>
 				<xsd:element name="temperatures" type="xsd:int"
