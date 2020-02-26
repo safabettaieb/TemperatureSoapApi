@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.safa.com/temperature/soap/api/temperatureRequestResponse"
+	xmlns:tns="http://www.safa.com/temperature/soap/api/temperatureRequestResponse"
+	elementFormDefault="qualified">
+
+	<xsd:element name="MinTemperatureRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="temperatures" type="xsd:int"
+					maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	  <xsd:element name="MinTemperatureResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="resTemp" type="xsd:int" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    	<xsd:element name="MaxTemperatureRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="temperatures" type="xsd:int"
+					maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	  <xsd:element name="MaxTemperatureResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="resTemp" type="xsd:int" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    	<xsd:element name="AvgTemperatureRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="temperatures" type="xsd:int"
+					maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	  <xsd:element name="AvgTemperatureResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="resTemp" type="xsd:double" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    	<xsd:element name="closestToZeroTemperatureRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="temperatures" type="xsd:int"
+					maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	  <xsd:element name="closestToZeroTemperatureResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="resTemp" type="xsd:int" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+	</xsd:schema>
